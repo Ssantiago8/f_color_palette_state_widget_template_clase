@@ -8,6 +8,8 @@ import '../widgets/color_palette.dart';
 class ColorSelectionPage extends StatelessWidget {
   const ColorSelectionPage({Key? key}) : super(key: key);
 
+ final Function (String) callback;
+
   void showDialog() {
     Get.dialog(const AlertDialog(
       title: Text('Flutter'),
@@ -81,6 +83,6 @@ class ColorSelectionPage extends StatelessWidget {
   }
 
   void showColor(String value) {
-    // aqui llamar al callback del main widget
-  }
+    callback(value);
+    }
 }
